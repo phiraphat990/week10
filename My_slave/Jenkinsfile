@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS=credentials('DOCKERHUB')
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub')
     }
     stages {
         stage('Trigged') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Pull from Docker') {
           steps {
-               dir('Lab_jenkins_dockercompose') { // change directory to Lab_docker_Jenkins
+               dir('week10') { // change directory to Lab_docker_Jenkins
                     echo "Pull . ."
                     sh "docker-compose pull"
                 }
@@ -25,11 +25,11 @@ pipeline {
         }
         stage('Start stage') {
             steps {
-                dir('Lab_jenkins_dockercompose') { // change directory to Lab_docker_Jenkins
+                dir('week10') { // change directory to Lab_docker_Jenkins
                     echo "Start . ."
                     sh "docker-compose up -d"
                 }
-            }
+            } 
         }
  
 }
