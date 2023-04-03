@@ -82,7 +82,7 @@ function App() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" onClick={() => submit()}>
+        <Button variant="primary" onClick={() => submit()}>
           Submit
         </Button>
       </Form>
