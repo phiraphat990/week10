@@ -5,7 +5,7 @@ pipeline {
     }
  
     stages {
-        stage('Initialize Stage2') {
+        stage('Initialize Stage3') {
             steps {
 
                 echo 'Initial : Delete  containers and image'
